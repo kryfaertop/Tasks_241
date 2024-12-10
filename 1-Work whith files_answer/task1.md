@@ -1,5 +1,5 @@
 1. Переместиться между директориями:<br />
-![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/1-Work%20whith%20files_answer/screenshot/1.png?raw=true)   
+![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/1-Work%20whith%20files_answer/screenshot/12.png?raw=true)   
 2. Вывести список файлов в директории:<br />
 ![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/1-Work%20whith%20files_answer/screenshot/2.png?raw=true)    
 3. Вывести список Всех файлов в директориии:<br />
