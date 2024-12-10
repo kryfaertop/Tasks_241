@@ -1,6 +1,6 @@
 1. Добавьте пользователей user1 и user2:   
 1.1) user1 - оболочка bash
->
+![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/1-Work%20whith%20files_answer/screenshot/1.png?raw=true)
 1.2) user2 - оболочка sh
 >
 1.3) установите им пароли
