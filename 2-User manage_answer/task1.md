@@ -3,7 +3,7 @@
 >![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/2-User%20manage_answer/screenshot/1.png?raw=true)<br />
 1.2) user2 - оболочка sh<br />
 >![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/2-User%20manage_answer/screenshot/2.png?raw=true)<br />
-1.3) установите им пароли
+1.3) установите им пароли<br />
 >![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/2-User%20manage_answer/screenshot/3.png?raw=true)<br />
 >
 2. Назначьте пользователю 1 группу администраторов, польователя 2 добавте в группу пользователя 1<br />
