@@ -17,9 +17,12 @@
 >![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/3-File%20systems_answer/screenshot/10.png?raw=true)<br />
 7. Отмонтируйте диск и проверье остались ли файлы<br />
 >![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/3-File%20systems_answer/screenshot/11.png?raw=true)<br />
-8. Сделайте так чтобы диск автоматически подключался при загрузке систем ( добавьте информацию о нём с fstab)<br />
->![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/3-File%20systems_answer/screenshot/12.png?raw=true)<br />
+8. Сделайте так чтобы диск автоматически подключался при загрузке систем ( добавьте информацию о нём с fstab)
+>Нам нужно получить UUID диска: blkid /dev/sdb2<br />
+>Тепереь запише в файл: UUID=[uuid] /mnt ext4 defaults 0 2
 9. Проверьте корретность записанных в fstab данных перед перезагрузкой<br />
->![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/3-File%20systems_answer/screenshot/15.png?raw=true)<br />
+> можно проверить командой: mount -a<br />
+>если не появляется ошибка - всё хорошо
 10. Перезагрущите систему и убедитесь что диск был подключён к системе
->Я не знаю, как исправить эту ошибку)
+> reboot now
+>
