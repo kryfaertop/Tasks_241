@@ -5,7 +5,6 @@
 ```bash
 systemctl list-units
 ```
-><br />
 >![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/5-Systemd_answer/screenshot/1.png?raw=true)<br />
 >Информация, предоставляемая командой<br />
 >Имя юнита: ssh.service и его описание.<br />
