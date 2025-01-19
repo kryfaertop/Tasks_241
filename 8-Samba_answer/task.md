@@ -1,6 +1,7 @@
 1. Установите пакет samba
 ```bash
 apt-get install samba
+apt-get install samba samba-client
 ```
 2. ЧТо такое побщая папка, зачем оно может быть нужно?
 >Общая папка — это специальная папка, которая предоставляет пользователям возможность совместного доступа к файлам и данным. Например, они могут быть использованы в различных операционных системах и приложениях, включая Windows, Linux
@@ -9,20 +10,13 @@ apt-get install samba
 ```bash
 mkdir -p /srv/samba/public
 chmod 777 /srv/samba/public
-chown nobody:nogroup /srv/samba/public
 ```
 >В данном конфиге:
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
->Дописываем в конец:
-```bash
-[public]
-   path = /srv/samba/public
-   guest ok = yes
-   read only = yes
-   browseable = yes
-```
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/5.png?raw=true)<br />
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/1.png?raw=true)<br />
 4. Создайте общую папку с паролем с правами на чтение и запись
 >Создадим папку и настроим ей доступ:
 ```bash
@@ -39,15 +33,8 @@ chown  smbuser:smbuser /srv/samba/secured
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
->Дописываем в конец:
-```bash
-[secured]
-path = /srv/samba/secured
-browseable = yes
-writable = yes
-valid users = smbuser
-guest ok = no
-```
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/6.png?raw=true)<br />
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/2.png?raw=true)<br />
 5. Создайте общую папку с доступом для какой-то группы с полными правами
 >Создадим папку и настроим ей доступ:
 ```bash
@@ -60,13 +47,8 @@ chmod 770 /srv/samba/group
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
->Дописываем в конец:
-```bash
-[group]
-path = /srv/samba/group
-read only = no
-valid users = @smbgroup
-```
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/7.png?raw=true)<br />
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/3.png?raw=true)<br />
 >По аналогии с добавлением в группу суперпользователя:
 ```bash
 usermod -aG smbgroup smbuser
@@ -84,18 +66,8 @@ chown root:smbgroup /srv/samba/group
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
->Дописываем в конец:
-```bash
-[group]
-path = /srv/samba/group
-browseable = yes
-writable = no
-valid users = @smbgroup, @read_access
-write list = @smbgroup
-force group = smbgroup
-create mask = 0660
-directory mask = 0770
-```
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/8.png?raw=true)<br />
+>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/4.png?raw=true)<br />
 > Добавляем нескольких пользователей и добавляем их в группы с разными правами доступа:
 ```bash
 useradd -m user1
