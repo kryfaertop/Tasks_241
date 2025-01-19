@@ -78,3 +78,4 @@ smbpasswd -a user1
 smbpasswd -a user2
 ```
 >если ошибок нет - всё работает
+>>![alt text](https://github.com/kryfaertop/Tasks_241/blob/my-report/8-Samba_answer/screenshots/9.png?raw=true)<br />
